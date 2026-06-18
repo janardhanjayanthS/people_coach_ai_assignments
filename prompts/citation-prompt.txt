@@ -1,0 +1,89 @@
+<document_urls>
+{document_urls}
+</document_urls>
+
+Strictly follow these rules without any exception:
+
+1. You must always provide a link ONLY from <document_urls> and related to the
+   provided <context>.
+
+2. CRITICAL — URL-CONTEXT MATCHING: Each <context> chunk has a corresponding URL in
+   <document_urls> with a matching identifier or filename. When citing, you MUST use
+   ONLY the URL that is explicitly paired with THAT EXACT <context> chunk. Never
+   cross-cite (e.g., do not use a URL from context A while answering from context B).
+
+3. If you provide multiple pieces of information from different <context> chunks, each
+   piece MUST be cited with its own corresponding <document_url>.
+
+4. VERBATIM URL RULE: Copy the URL character-for-character exactly as it appears in
+   <document_urls>. Do NOT modify, shorten, paraphrase, reconstruct, or infer any
+   part of the URL. Even a single character change makes the link invalid.
+
+   SPECIAL CHARACTER WARNING: URLs from <document_urls> may contain special characters
+   such as $, %, numbers, and long alphanumeric strings. These are NOT errors — copy
+   them exactly as-is. Do not sanitize, encode, or remove any character from the URL.
+
+5. SELF-CHECK BEFORE CITING: Before including any URL in your response, verify:
+   - Step 1: Is this URL present verbatim in <document_urls>? If not, do not use it.
+   - Step 2: Does this URL correspond to the exact <context> I am drawing from?
+             If not, do not use it.
+   - Step 3: Only if both checks pass, include the URL.
+
+6. FULL URL REQUIREMENT — NEVER truncate or shorten a URL. The complete URL includes
+   everything: the protocol (https://), domain, and full path including all
+   subdirectories, identifiers, and file extensions.
+
+   WRONG (truncated to domain only):
+   <a href="https://wd3.myworkday.com/resmed" ...>
+
+   RIGHT (full specific path preserved):
+   <a href="https://wd3-impl.workday.com/resmed_preview/email-universal/inst/25755$238/rel-task/2998$40834.htmld" ...>
+
+   A URL that ends right after the domain or has only one short segment after it
+   (e.g., .com/resmed with nothing further) is NEVER a valid citation URL.
+   If that is all you have, omit the link entirely.
+
+7. PATH DEPTH CHECK — Before outputting any URL, confirm it contains a meaningful
+   path beyond the domain. A valid citation URL will typically contain multiple path
+   segments (e.g., /resmed_preview/email-universal/inst/...). If the URL you are
+   about to use has no path or only one short segment after the domain, treat it as
+   a generic URL and discard it — do not use it as a citation.
+
+8. NON-EMPTY HREF RULE: You are strictly prohibited from outputting an <a> tag with
+   an empty, null, or placeholder href (e.g., href="", href="#", href="url").
+   If a valid, complete URL cannot be confirmed from <document_urls>, do NOT render
+   an <a> tag at all. Plain text with no link is always preferable to a broken link.
+
+9. LINK TEXT RULE — The visible link text (text inside square brackets or between
+   <a> tags) MUST always be a short, human-readable document title.
+
+   STRICTLY PROHIBITED as link text:
+   - The URL itself or any part of it:        WRONG: [https://wd3-impl.workday.com/...]
+   - Raw document/citation IDs or codes:      WRONG: [inst/25755$238]
+   - Internal system names or identifiers:    WRONG: [rel-task/2998$40834]
+   - File names or extensions:                WRONG: [policy_doc_v2.htmld]
+   - Placeholder text:                        WRONG: [Document] [Link] [Click here] [URL]
+
+   ALWAYS use a clean, descriptive title a non-technical user would understand:
+   RIGHT: [Examination Leave Policy (Kuala Lumpur)]
+   RIGHT: [Payroll Calendar 2025]
+   RIGHT: [Education Leave Policy - Malaysia]
+
+   HOW TO DERIVE THE TITLE:
+   - Step 1: Use the document title explicitly stated in the <context> if available.
+   - Step 2: If no title exists, construct a brief descriptive name from the
+             topic and region/department covered by that context chunk.
+   - Step 3: Never use anything from the URL to form the link text.
+
+   The link must be formatted exactly as follows, without exception:
+   **Learn More:** [Document Name or Title](URL from <document_urls>)
+
+10. "Learn More:" must always appear on a new line, separate from the answer body.
+
+11. You are strictly prohibited from generating, constructing, or inferring any URL
+    on your own under any circumstances. Only URLs that appear verbatim in
+    <document_urls> may be used.
+
+12. If no matching URL exists in <document_urls> for a specific piece of information,
+    omit the citation entirely. Never provide a best-guess, approximate, or
+    reconstructed URL. No link is always better than a wrong link.
