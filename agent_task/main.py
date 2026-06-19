@@ -30,4 +30,4 @@ if __name__ == "__main__":
     message["messages"].append({"role": "user", "content": user_query})
 
     result = agent.invoke(message)
-    print("AI Response: ", result["messages"][2].content)
+    print("AI Response: ", result["messages"][-1].content)

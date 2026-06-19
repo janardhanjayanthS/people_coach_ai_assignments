@@ -21,7 +21,7 @@ class JSONDB:
 
     def __save_data(self) -> None:
         with open(self.path, "w") as file:
-            print(f"saving {self.data} as json")
+            # print(f"saving {self.data} as json")
             json.dump(self.data, file, indent=4)
 
     def __update_data_and_save_json(self, tasks: list) -> None:

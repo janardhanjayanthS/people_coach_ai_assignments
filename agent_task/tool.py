@@ -10,7 +10,7 @@ from prompt import (
 db = JSONDB()
 
 
-@tool("add task", description=ADD_TASK_PROMPT)
+@tool("add_task", description=ADD_TASK_PROMPT)
 def add_task(name: str, description: str) -> str:
     """
     Create a new task.
@@ -32,7 +32,7 @@ def add_task(name: str, description: str) -> str:
     return result
 
 
-@tool("remove task", description=REMOVE_TASK_PROMPT)
+@tool("remove_task", description=REMOVE_TASK_PROMPT)
 def remove_task(name: str) -> str:
     """
     Delete an existing task.
@@ -51,7 +51,7 @@ def remove_task(name: str) -> str:
     return f"Unable to find task '{name}'."
 
 
-@tool("edit task status", description=EDIT_TASK_PROMPT)
+@tool("edit_task_status", description=EDIT_TASK_PROMPT)
 def edit_task_status(name: str, status: str) -> str:
     """
     Update the status of an existing task.
@@ -79,7 +79,7 @@ def edit_task_status(name: str, status: str) -> str:
     return f"Unable to find task '{name}'."
 
 
-@tool("view tasks", description=VIEW_TASK_PROMPT)
+@tool("view_tasks", description=VIEW_TASK_PROMPT)
 def view_tasks() -> str:
     """
     Retrieve all stored tasks.

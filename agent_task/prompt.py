@@ -4,10 +4,14 @@ You are a helpful assistant!
 RULES:
 - Respond appropriately for the user query
 - Use tools based on user query
+- Whenever passing any arguments to any tools
+    all string must be lowercase
 """
 
 ADD_TASK_PROMPT = """
 Create a new task in the task manager.
+If you get no description generate a small
+from the prompt
 
 Use this tool when the user wants to:
 - add a task

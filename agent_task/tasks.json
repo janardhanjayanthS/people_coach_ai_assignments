@@ -3,7 +3,7 @@
         {
             "name": "buy grocery",
             "description": "food important",
-            "status": "DONE"
+            "status": "todo"
         }
     ]
 }
