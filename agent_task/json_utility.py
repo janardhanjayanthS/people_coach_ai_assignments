@@ -35,12 +35,7 @@ class JSONDB:
         tasks = self.__get_tasks()
         for task in tasks:
             if name == task["name"]:
-                if status == task["status"]:
-                    return "task exists with same task name and status"
-                else:
-                    task["status"] = status
-                    self.__update_data_and_save_json(tasks=tasks)
-                    return "task status updated"
+                return "task exists with same name"
         tasks.append({"name": name, "description": description, "status": status})
         self.__update_data_and_save_json(tasks=tasks)
         return "new task added"
@@ -69,15 +64,3 @@ class JSONDB:
 
         self.__update_data_and_save_json(tasks=tasks)
         return True
-
-
-# if __name__ == "__main__":
-#     db = JSONDB()
-#     db.save_task("journal!", "journal sunday to let off steam", status=TaskStatus.TODO)
-#     db.save_task(
-#         "journal!", "journal sunday to let off steam", status=TaskStatus.COMPLETED
-#     )
-#     db.save_task("buy grocery", "food important", status=TaskStatus.TODO)
-#     db.update_task_status("buy grocery", "DONE")
-#     db.delete_task("journal!")
-#     print(db.fetch_all_tasks())
