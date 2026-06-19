@@ -1,11 +1,29 @@
 SYSTEM_PROMPT = """
-You are a helpful assistant!
+You are a helpful assistant
 
 RULES:
 - Respond appropriately for the user query
 - Use tools based on user query
 - Whenever passing any arguments to any tools
     all string must be lowercase
+- If there is a user query regarding knowledge base or
+    existing documents then use rag_tool
+"""
+
+RAG_PROMPT = """
+Invoke this tool whenever the user asks about the stored information
+in prompt.
+
+Use this tool when:
+- the user asks a question about stored documentation
+- the user asks about information that may exist in the knowledge base
+- factual information should be retrieved before answering
+
+Do not make assumptions when information may exist in the knowledge base.
+Search the knowledge base first and use the retrieved information to answer.
+
+Arguments:
+- query: the user's question or search query
 """
 
 ADD_TASK_PROMPT = """

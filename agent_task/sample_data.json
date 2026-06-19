@@ -1,0 +1,90 @@
+[
+    {
+        "title": "langchain",
+        "content": "langchain is a framework for building ai applications. it provides tools, agents, prompts, memory, retrieval, and integrations with llm providers."
+    },
+    {
+        "title": "mcp",
+        "content": "mcp stands for model context protocol. it is an open protocol that enables ai applications to securely connect to external tools, data sources, and services."
+    },
+    {
+        "title": "rag",
+        "content": "rag stands for retrieval augmented generation. it combines information retrieval with large language models to generate responses grounded in external knowledge."
+    },
+    {
+        "title": "artificial intelligence",
+        "content": "artificial intelligence (ai) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making."
+    },
+    {
+        "title": "vector database",
+        "content": "a vector database stores vector embeddings and enables similarity search. examples include chroma, pinecone, weaviate, qdrant, and milvus."
+    },
+    {
+        "title": "embeddings",
+        "content": "embeddings are numerical representations of data that capture semantic meaning. they allow systems to compare text based on similarity rather than exact keyword matches."
+    },
+    {
+        "title": "agent",
+        "content": "an ai agent uses a language model together with tools and reasoning steps to accomplish tasks on behalf of a user."
+    },
+    {
+        "title": "tool calling",
+        "content": "tool calling allows a language model to invoke external functions and services to obtain information or perform actions."
+    },
+    {
+        "title": "prompt engineering",
+        "content": "prompt engineering is the practice of designing instructions and context to guide the behavior of language models."
+    },
+    {
+        "title": "python",
+        "content": "python is a high-level programming language known for readability and a rich ecosystem of libraries for data science, machine learning, and web development."
+    },
+    {
+        "title": "json",
+        "content": "json stands for javascript object notation. it is a lightweight data-interchange format commonly used for apis and configuration files."
+    },
+    {
+        "title": "openai",
+        "content": "openai develops artificial intelligence models and platforms including chatgpt and the gpt family of models."
+    },
+    {
+        "title": "fastmcp",
+        "content": "fastmcp is a python framework for building mcp servers quickly using decorators and simple tool definitions."
+    },
+    {
+        "title": "langgraph",
+        "content": "langgraph is a framework for building stateful multi-step agent workflows and orchestration systems."
+    },
+    {
+        "title": "retriever",
+        "content": "a retriever is a component in a rag system responsible for finding relevant documents or passages based on a user's query."
+    },
+    {
+        "title": "chunking",
+        "content": "chunking is the process of splitting large documents into smaller sections before generating embeddings and storing them in a vector database."
+    },
+    {
+        "title": "similarity search",
+        "content": "similarity search finds documents whose embeddings are closest to the query embedding according to a distance metric such as cosine similarity."
+    },
+    {
+        "title": "llm",
+        "content": "llm stands for large language model. llms are trained on large amounts of text data and can generate human-like responses."
+    },
+    {
+        "title": "transformer",
+        "content": "the transformer architecture introduced self-attention mechanisms and became the foundation of modern large language models."
+    },
+    {
+        "title": "demo company policy",
+        "content": "employees may work remotely up to three days per week. manager approval is required for additional remote work days."
+    },
+    {
+        "title": "demo vacation policy",
+        "content": "employees receive twenty annual leave days per calendar year. unused leave does not carry over to the next year."
+    },
+    {
+        "title": "demo expense policy",
+        "content": "business expenses above one thousand dollars require director approval before reimbursement can be processed."
+    }
+]

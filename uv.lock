@@ -1944,6 +1944,7 @@ dependencies = [
     { name = "langchain" },
     { name = "langchain-mcp-adapters" },
     { name = "langchain-openai" },
+    { name = "mcp" },
     { name = "requests" },
 ]
 
@@ -1957,6 +1958,7 @@ requires-dist = [
     { name = "langchain", specifier = ">=1.3.9" },
     { name = "langchain-mcp-adapters", specifier = ">=0.3.0" },
     { name = "langchain-openai", specifier = ">=1.3.2" },
+    { name = "mcp", specifier = ">=1.28.0" },
     { name = "requests", specifier = ">=2.34.2" },
 ]
 
