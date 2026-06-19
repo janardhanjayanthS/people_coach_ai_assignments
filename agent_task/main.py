@@ -1,5 +1,4 @@
 from os import getenv
-from uuid import uuid4
 
 from dotenv import load_dotenv
 from langchain.agents import create_agent
@@ -13,7 +12,6 @@ if not OPENAI_API_KEY:
 
 agent = create_agent(model="openai:gpt-4o-mini")
 
-config = {"configurable": {"thread_id": str(uuid4())}}
 
 message = {
     "messages": [
@@ -22,16 +20,10 @@ message = {
 }
 
 
-while True:
+if __name__ == "__main__":
     user_query = input("Enter Query: ")
-
-    if user_query.lower() in {"exit", "quit", "q", "e"}:
-        break
 
     message["messages"].append({"role": "user", "content": user_query})
 
-    result = agent.invoke(
-        message,
-        config=config,
-    )
-    print(result)
+    result = agent.invoke(message)
+    print("AI Response: ", result["messages"][2].content)
